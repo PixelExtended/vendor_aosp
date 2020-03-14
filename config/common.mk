@@ -30,6 +30,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
 
+# Enable blurs, hidden under dev option
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1 \
+    persist.sys.sf.disable_blurs=1 \
+    ro.sf.blurs_are_expensive=1
 
 # Binaries for file-based incremental ota
 PRODUCT_COPY_FILES += \
