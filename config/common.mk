@@ -165,8 +165,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Required packages
 PRODUCT_PACKAGES += \
-     MiXplorer
-
+     MiXplorer \
+     Gallery
 # Branding
 include vendor/aosp/config/branding.mk
 
