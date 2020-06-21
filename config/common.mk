@@ -27,7 +27,7 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 else
 # Enable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
 endif
 
 # Backup Tool
@@ -77,7 +77,7 @@ PRODUCT_COPY_FILES += \
 
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.control_privapp_permissions=enforce
+    ro.control_privapp_permissions=log
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
