@@ -6,6 +6,9 @@ IS_PHONE := true
 PRODUCT_PACKAGES += \
     apns-conf.xml
 
+# Plugins
+include packages/apps/PotatoPlugins/plugins.mk
+
 # Telephony packages
 PRODUCT_PACKAGES += \
     Stk \
