@@ -76,6 +76,11 @@ PRODUCT_COPY_FILES += \
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
+    
+#HAXX for ROOT Detetction
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.build.tags=release-keys
+     ro.odm.build.tags=release-keys
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
