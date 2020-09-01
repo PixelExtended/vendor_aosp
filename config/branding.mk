@@ -1,5 +1,6 @@
 # Set all versions
 PEX_BUILD_TYPE ?= Fan-Edition
+PEX_VERSION := 0.1
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
@@ -17,6 +18,7 @@ CUSTOM_VERSION := PixelExtended_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUS
 CUSTOM_VERSION_PROP := 10
 
 CUSTOM_PROPERTIES := \
+    org.pex.version=$(PEX_VERSION)
     org.pixelexperience.version=$(CUSTOM_VERSION_PROP) \
     org.pixelexperience.version.display=$(CUSTOM_VERSION) \
     org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
