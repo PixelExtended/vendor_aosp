@@ -17,7 +17,7 @@ TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 CUSTOM_VERSION := PixelExtended_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(PEX_BUILD_TYPE)
 CUSTOM_VERSION_PROP := eleven
 
-CUSTOM_PROPERTIES := \
+PRODUCT_GENERIC_PROPERTIES += \
     org.pex.version=$(PEX_VERSION) \
     org.pex.version.prop=$(CUSTOM_VERSION_PROP) \
     org.pex.version.display=$(CUSTOM_VERSION) \
