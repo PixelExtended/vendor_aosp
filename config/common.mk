@@ -126,11 +126,6 @@ PRODUCT_PACKAGES += \
     misc_writer_system \
     themed_bootanimation
 
-# Required packages
-PRODUCT_PACKAGES += \
-     MiXplorer \
-     Gallery
-
 # Branding
 include vendor/aosp/config/branding.mk
 
