@@ -130,13 +130,13 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 include vendor/aosp/config/branding.mk
 
 # OTA
-include vendor/aosp/config/ota.mk
+#include vendor/aosp/config/ota.mk
 
-# GApps
-#include vendor/gapps/config.mk
+# Inherit from GMS product config
+$(call inherit-product, vendor/gms/gms_full.mk)
 
 # Pixel Style
-#include vendor/pixelstyle/config.mk
+include vendor/pixelstyle/config.mk
 
 # Customization
 #include vendor/google-customization/config.mk
