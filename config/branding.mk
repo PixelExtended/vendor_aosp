@@ -1,6 +1,6 @@
 # Set all versions
 PEX_BUILD_TYPE ?= UNOFFICIAL
-PEX_VERSION := 0.1
+PEX_VERSION := 2.0
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
