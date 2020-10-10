@@ -136,7 +136,7 @@ include vendor/aosp/config/branding.mk
 $(call inherit-product, vendor/gms/gms_full.mk)
 
 # Pixel Style
-include vendor/pixelstyle/config.mk
+#include vendor/pixelstyle/config.mk
 
 # Customization
 #include vendor/google-customization/config.mk
