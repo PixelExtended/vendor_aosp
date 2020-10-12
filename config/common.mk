@@ -12,25 +12,24 @@ endif
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.debug.alloc=0 \
-    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+    keyguard.no_require_sim=true \
+    media.recorder.show_manufacturer_and_model=true \
+    net.tethering.noprovisioning=true \
+    persist.sys.disable_rescue=true \
+    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
+    ro.carrier=unknown \
+    ro.com.android.dataroaming=false \
+    ro.com.android.dateformat=MM-dd-yyyy \
+    ro.config.bt_sco_vol_steps=30 \
+    ro.config.media_vol_steps=30 \
     ro.error.receiver.system.apps=com.google.android.gms \
     ro.setupwizard.enterprise_mode=1 \
-    ro.com.android.dataroaming=false \
-    ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
-    ro.com.android.dateformat=MM-dd-yyyy \
-    persist.sys.disable_rescue=true \
-    ro.setupwizard.rotation_locked=true
+    ro.storage_manager.enabled=true \
+    ro.com.google.ime.bs_theme=true \
+    ro.com.google.ime.theme_id=5 \
+    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html
 
-# Enable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
-
-
-# AOSP recovery flashing
-ifeq ($(TARGET_USES_AOSP_RECOVERY),true)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.sys.recovery_update=true
-endif
 
 # Binaries for file-based incremental ota
 PRODUCT_COPY_FILES += \
@@ -106,12 +105,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
 
+# Gestures
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
+
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
-
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/aosp/overlay
-DEVICE_PACKAGE_OVERLAYS += vendor/aosp/overlay/common
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -133,10 +133,10 @@ include vendor/aosp/config/branding.mk
 #include vendor/aosp/config/ota.mk
 
 # Inherit from GMS product config
-$(call inherit-product, vendor/gms/gms_full.mk)
+$(call inherit-product, vendor/gapps/gapps.mk)
 
 # Pixel Style
-#include vendor/pixelstyle/config.mk
+include vendor/overlay/overlays.mk
 
 # Customization
 #include vendor/google-customization/config.mk
