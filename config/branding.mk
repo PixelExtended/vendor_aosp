@@ -1,5 +1,5 @@
 # Set all versions
-CUSTOM_BUILD_TYPE ?= UNOFFICIAL
+PEX_BUILD_TYPE ?= UNOFFICIAL
 PEX_VERSION := 2.1
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
@@ -14,7 +14,7 @@ CUSTOM_PLATFORM_VERSION := 11.0
 
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
-CUSTOM_VERSION := PixelExtended_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD_TYPE)
+CUSTOM_VERSION := PixelExtended_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(PEX_BUILD_TYPE)
 CUSTOM_VERSION_PROP := eleven
 
 CUSTOM_PROPERTIES := \
@@ -23,4 +23,4 @@ CUSTOM_PROPERTIES := \
     org.pixelexperience.version.display=$(CUSTOM_VERSION) \
     org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
     org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.pixelexperience.build_type=$(CUSTOM_BUILD_TYPE)
+    org.pixelexperience.build_type=$(PEX_BUILD_TYPE)
