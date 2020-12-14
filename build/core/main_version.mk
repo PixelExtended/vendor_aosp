@@ -2,7 +2,7 @@
 ifeq ($(BUILD_FINGERPRINT),)
 BUILD_NUMBER_CUSTOM := $(shell date -u +%H%M)
 CUSTOM_DEVICE ?= $(TARGET_DEVICE)
-ifneq ($(filter OFFICIAL,$(CUSTOM_BUILD_TYPE)),)
+ifneq ($(filter OFFICIAL,$(PEX_BUILD_TYPE)),)
 BUILD_SIGNATURE_KEYS := release-keys
 else
 BUILD_SIGNATURE_KEYS := test-keys
@@ -19,7 +19,8 @@ ADDITIONAL_BUILD_PROPERTIES += \
 endif
 
 # Branding
-CUSTOM_BUILD_TYPE ?= UNOFFICIAL
+PEX_BUILD_TYPE ?= UNOFFICIAL
+PEX_VERSION := 2.7
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
@@ -33,12 +34,13 @@ CUSTOM_PLATFORM_VERSION := 11.0
 
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
-CUSTOM_VERSION := PixelExperience_Plus_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD_TYPE)
+CUSTOM_VERSION := PixelExtended_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(PEX_BUILD_TYPE)
 CUSTOM_VERSION_PROP := eleven_plus
 
 ADDITIONAL_BUILD_PROPERTIES += \
+    org.pex.version=$(PEX_VERSION) \
     org.pixelexperience.version=$(CUSTOM_VERSION_PROP) \
     org.pixelexperience.version.display=$(CUSTOM_VERSION) \
     org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
     org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.pixelexperience.build_type=$(CUSTOM_BUILD_TYPE)
+    org.pixelexperience.build_type=$(PEX_BUILD_TYPE)
