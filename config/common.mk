@@ -208,6 +208,9 @@ $(call inherit-product, vendor/aosp/config/fonts.mk)
 # GApps
 $(call inherit-product, vendor/gapps/config.mk)
 
+# Custom Overlays
+$(call inherit-product, vendor/overlay/overlays.mk)
+
 # OTA
 #$(call inherit-product, vendor/aosp/config/ota.mk)
 
