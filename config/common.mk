@@ -216,7 +216,7 @@ $(call inherit-product, vendor/gapps/config.mk)
 $(call inherit-product, vendor/overlay/overlays.mk)
 
 # OTA
-#$(call inherit-product, vendor/aosp/config/ota.mk)
+$(call inherit-product, vendor/aosp/config/ota.mk)
 
 # RRO Overlays
 $(call inherit-product, vendor/aosp/config/rro_overlays.mk)
