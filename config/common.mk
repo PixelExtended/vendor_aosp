@@ -115,6 +115,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NavigationBarMode2ButtonOverlay
 
+# Stitch Image
+PRODUCT_PACKAGES += \
+    StitchImage \
+    StitchImageService
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
