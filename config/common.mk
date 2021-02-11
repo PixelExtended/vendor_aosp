@@ -112,6 +112,11 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     TouchGestures
 
+# Stitch Image
+PRODUCT_PACKAGES += \
+    StitchImage \
+    StitchImageService
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
