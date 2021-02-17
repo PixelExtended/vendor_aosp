@@ -202,9 +202,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 endif
 
-# Apex
-$(call inherit-product, vendor/aosp/config/apex.mk)
-
 # Audio
 $(call inherit-product, vendor/aosp/config/audio.mk)
 
