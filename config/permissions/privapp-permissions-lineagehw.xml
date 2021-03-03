@@ -2,6 +2,7 @@
 <permissions>
     <privapp-permissions package="com.android.systemui">
         <permission name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
+	<permission name="android.permission.FORCE_STOP_PACKAGES"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.android.settings">
