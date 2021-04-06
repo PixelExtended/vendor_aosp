@@ -120,6 +120,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     TouchGestures
 
+#DocumentsUI
+PRODUCT_PACKAGES += \
+    DocumentsUI
+
 # Stitch Image
 PRODUCT_PACKAGES += \
     StitchImage \
