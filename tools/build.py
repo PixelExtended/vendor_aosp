@@ -72,7 +72,7 @@ print ("")
 print ("")
 print ("")
 
-# Variant & Building & Upload+OTA
+# Variables
 name=input("\nEnter your name :- eg Aryan_Gupta : ")
 tgname=input("\nEnter Your telegram username [Without '@'] : ")
 codename=input("\nEnter your device code name :- eg miatoll/laurel_sprout : ")
@@ -81,6 +81,10 @@ btype=input("\nEnter the type of build u want [user/eng/userdebug] : ")
 sfun=input("\nEnter your sourceforge username :-  ")
 sfpass=input("\nEnter your sourceforge password : ")
 
+# Build/Ota/Upload
 os.system("bash build.sh %s %s"%(codename,btype))
-os.system("sshpass -p '%s' rsync --progress out/target/product/%s/PixelExtended*.zip %s@frs.sourceforge.net:/home/frs/project/pixelextended/%s/"%(sfpass,codename,sfun,codename))
-ota()
+check = open("maintainer.md", "r")
+store = check.read()
+if codename in store:
+    os.system("sshpass -p '%s' rsync --progress out/target/product/%s/PixelExtended*.zip %s@frs.sourceforge.net:/home/frs/project/pixelextended/%s/"%(sfpass,codename,sfun,codename))
+    ota()
