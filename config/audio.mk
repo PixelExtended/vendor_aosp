@@ -13,6 +13,7 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/audio/alarms/Sunshower.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Sunshower.ogg \
     vendor/aosp/audio/notifications/Beginning.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Beginning.ogg \
     vendor/aosp/audio/notifications/Coconuts.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Coconuts.ogg \
+    vendor/aosp/audio/notifications/Ceres.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Ceres.ogg \
     vendor/aosp/audio/notifications/Duet.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Duet.ogg \
     vendor/aosp/audio/notifications/End_note.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/End_note.ogg \
     vendor/aosp/audio/notifications/Gentle_gong.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Gentle_gong.ogg \
@@ -70,5 +71,5 @@ PRODUCT_COPY_FILES += \
 # Change default sounds
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.ringtone=The_big_adventure.ogg \
-    ro.config.notification_sound=Popcorn.ogg \
+    ro.config.notification_sound=Ceres.ogg \
     ro.config.alarm_alert=Bright_morning.ogg
