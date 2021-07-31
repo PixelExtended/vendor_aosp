@@ -39,9 +39,6 @@
     <string name="config_emergency_dialer_package">com.google.android.apps.safetyhub</string>
     <string name="config_feedbackIntentExtraKey">EXTRA_FEEDBACK_PSD_KEYS</string>
     <string name="config_feedbackIntentNameKey">EXTRA_FEEDBACK_PSD_VALUES</string>
-    <string name="config_headlineFontFamily">google-sans</string>
-    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
-    <string name="config_headlineFontFeatureSettings">ss03</string>
     <string name="config_helpIntentExtraKey">EXTRA_PSD_KEYS</string>
     <string name="config_helpIntentNameKey">EXTRA_PSD_VALUES</string>
     <string name="config_helpPackageNameKey">genie-eng:app_pkg_name</string>
