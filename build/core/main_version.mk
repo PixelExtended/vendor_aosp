@@ -20,7 +20,7 @@ endif
 
 # Branding
 PEX_BUILD_TYPE ?= UNOFFICIAL
-PEX_VERSION := 2.9
+PEX_VERSION := 3.0
 PEX_MAINTAINER ?= Unknown
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
