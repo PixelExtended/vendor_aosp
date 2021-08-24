@@ -113,7 +113,8 @@ PRODUCT_PACKAGES += \
 
 # Customizations
 PRODUCT_PACKAGES += \
-    NavigationBarMode2ButtonOverlay
+    NavigationBarMode2ButtonOverlay \
+    SoftAPManager
 
 # Stitch Image
 PRODUCT_PACKAGES += \
