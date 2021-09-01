@@ -116,6 +116,13 @@ PRODUCT_PACKAGES += \
     NavigationBarMode2ButtonOverlay \
     SoftAPManager
 
+# GaminMode
+PRODUCT_PACKAGES += \
+    GamingMode
+
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/etc/init/init.performance_level.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.performance_level.rc
+
 # Stitch Image
 PRODUCT_PACKAGES += \
     StitchImage \
