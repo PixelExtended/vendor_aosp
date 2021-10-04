@@ -42,8 +42,8 @@ except ImportError:
 
 DEBUG = False
 
-custom_local_manifest = ".repo/local_manifests/pixelextended.xml"
-custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'eleven)
+custom_local_manifest = ".repo/local_manifests/pex.xml"
+custom_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', 'eleven')
 custom_dependencies = "aosp.dependencies"
 org_manifest = "pixelextended-devices"  # leave empty if org is provided in manifest
 org_display = "PixelExtended-Devices"  # needed for displaying
