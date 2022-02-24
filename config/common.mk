@@ -40,10 +40,6 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/aosp/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
 
-# app lock permission
-PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/privapp-permissions-settings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-settings.xml
-
 # Copy all custom init rc files
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/init/init.pixelexperience-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.pixelexperience-updater.rc
