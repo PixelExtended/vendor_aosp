@@ -233,4 +233,7 @@ $(call inherit-product, vendor/pixel-framework/config.mk)
 # Themed icons
 $(call inherit-product, packages/overlays/ThemeIcons/config.mk)
 
+#Custom Overlays
+$(call inherit-product, vendor/overlays/overlays.mk)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
