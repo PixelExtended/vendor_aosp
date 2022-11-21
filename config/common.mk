@@ -238,8 +238,12 @@ $(call inherit-product, vendor/overlays/overlays.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
-# UDFPS Animations
+ifeq ($(TARGET_HAS_UDFPS),true)
+PRODUCT_PACKAGES += \
+    UdfpsIcons
+
 ifeq ($(EXTRA_UDFPS_ANIMATIONS),true)
 PRODUCT_PACKAGES += \
-    UdfpsResources
+    UdfpsAnimations
+endif
 endif
