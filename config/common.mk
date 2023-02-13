@@ -229,8 +229,8 @@ $(call inherit-product, vendor/aosp/config/fonts.mk)
 PRODUCT_PACKAGES += \
     GameSpace
 
-# GApps
-$(call inherit-product, vendor/gapps/config.mk)
+# GMS
+$(call inherit-product, vendor/gms/products/gms.mk)
 
 # OTA
 $(call inherit-product, vendor/aosp/config/ota.mk)
