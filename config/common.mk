@@ -225,9 +225,6 @@ $(call inherit-product, vendor/aosp/config/audio.mk)
 # Bootanimation
 $(call inherit-product, vendor/aosp/config/bootanimation.mk)
 
-# Fonts
-$(call inherit-product, vendor/aosp/config/fonts.mk)
-
 # GMS
 $(call inherit-product, vendor/gms/products/gms.mk)
 
@@ -242,5 +239,8 @@ $(call inherit-product, vendor/pixel-framework/config.mk)
 
 # Themed icons
 $(call inherit-product, packages/overlays/ThemeIcons/config.mk)
+
+#Custom Overlays
+$(call inherit-product, vendor/overlays/overlays.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
