@@ -34,4 +34,5 @@ ADDITIONAL_SYSTEM_PROPERTIES  += \
     org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
     org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
     org.pixelexperience.build_type=$(CUSTOM_BUILD_TYPE) \
-    org.pixelexperience.build_security_patch=$(CUSTOM_SECURITY_PATCH)
+    org.pixelexperience.build_security_patch=$(CUSTOM_SECURITY_PATCH) \
+    org.pex.version=$(BUILD_TYPE)
